@@ -61,15 +61,16 @@ function formatLicenses(modules) {
                 text += '\n\n';
                 text += module.packageJson.homepage;
                 authorOrUrl = true;
-            } else if (module.packageJson.repository.url) {
-                text += '\n\n';
-                text += module.packageJson.repository.url;
-                authorOrUrl = true;
             }
-            if (!authorOrUrl) {
-                console.log(module);
-                throw new Error('Can not find author or url for ' + module.packageJson.name);
-            }
+            //  else if (module.packageJson.repository.url) {
+            //     text += '\n\n';
+            //     text += module.packageJson.repository.url;
+            //     authorOrUrl = true;
+            // }
+            // if (!authorOrUrl) {
+            //     console.log(module);
+            //     throw new Error('Can not find author or url for ' + module.packageJson.name);
+            // }
         }
         const entry = 'LicenseEntryWithLineBreaks([\'' + module.packageJson.name + '\'],\'\'\'' + text.trim() + '\'\'\')';
         if (module.licenseText) {

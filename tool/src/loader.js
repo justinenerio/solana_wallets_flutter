@@ -17,7 +17,9 @@ import {
     SolletWalletAdapter,
     SolongWalletAdapter,
     TokenPocketWalletAdapter,
-    TorusWalletAdapter
+    TorusWalletAdapter,
+    TrustWalletAdapter,
+    WalletConnectWalletAdapter
 } from '@solana/wallet-adapter-wallets';
 import { Transaction, Message } from '@solana/web3.js';
 
@@ -40,7 +42,9 @@ const _wallets = [
     new SolletWalletAdapter(),
     new SolongWalletAdapter(),
     new TokenPocketWalletAdapter(),
-    new TorusWalletAdapter()
+    new TorusWalletAdapter(),
+    new TrustWalletAdapter(),
+    new WalletConnectWalletAdapter(),
 ];
 
 const solana_wallets_flutter = {
